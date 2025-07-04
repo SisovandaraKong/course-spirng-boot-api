@@ -91,8 +91,7 @@ public class CourseServiceImpl implements CourseService {
 
     @Override
     public Integer deleteCourseByCode(String code) {
-        courseRepository.delete(code);
-        return 1;
+        return courseRepository.delete(code);
     }
 
     @Override

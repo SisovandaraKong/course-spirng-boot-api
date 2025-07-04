@@ -29,7 +29,7 @@ public class CourseController {
 
     @ResponseStatus(HttpStatus.OK)
     @GetMapping("/title")
-    public Map<String,Object> getCoursesByTitle(String title, Boolean status){
+    public Map<String,Object> getCoursesByTitle(@RequestParam String title,@RequestParam Boolean status){
         return Map.of(
                 "courses", courseService.getCoursesByTitle(title, status)
         );
